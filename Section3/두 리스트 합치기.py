@@ -1,28 +1,13 @@
 
 N = int(input())
+nlist = list(map(int,input().split()))
 
-arrNM=[]
+M =int(input())
+mlist = list(map(int,input().split()))
 
-arrN = list(map(int,input().split()))
-
-M = int(input())
-
-arrM = list(map(int,input().split()))
-
-check = [0]*(200)
+res = nlist+mlist
+res.sort()
 
 
-print(arrN)
-print(arrM)
-
-for i in range(len(arrN)):
-    check[arrN[i]]+=1
-
-for i in range(len(arrM)):
-    check[arrM[i]]+=1
-
-
-for i in range(1,N+M+2):
-    if check[i]!=0:
-        for j in range(check[i]):
-            print(i, end=' ')
+for i in range(len(res)):
+    print(res[i], end=' ')
